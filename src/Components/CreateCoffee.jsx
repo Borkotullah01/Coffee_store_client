@@ -17,7 +17,7 @@ const CreateCoffee = () => {
       const details = form.details.value;
       const photo = form.photo.value;
       const newCoffee = {name, chef, price, supplier, category, details, photo};
-      fetch("http://localhost:5000/coffees",{
+      fetch("https://coffee-store-server-virid-nine.vercel.app/coffees",{
         method: "post",
         headers: {
           "content-type" : "application/json"

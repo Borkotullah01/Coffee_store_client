@@ -21,7 +21,7 @@ const CoffeeCard = ({coffee}) => {
             confirmButtonText: "Yes, delete it!"
           }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/coffees/${_id}`, {
+                fetch(`https://coffee-store-server-5ofnevl9o-jawad-bashars-projects.vercel.app//${_id}`, {
                     method: "delete",
                 })
                 .then(res=>res.json())
@@ -51,7 +51,7 @@ const CoffeeCard = ({coffee}) => {
             <div className="join join-vertical gap-2">
               <Link to={`/details/${_id}`} className="btn btn-sm rounded-md text-white bg-[#D2B48C]"><TiEye /></Link>
               <Link to={`/update/${_id}`} className="btn btn-sm rounded-md text-white bg-[#3C393B]"><FaPen /></Link>
-              <Link onClick={()=>handleDelete(_id)} className="btn btn-sm rounded-md text-white bg-[#EA4744]"><MdDelete /></Link>
+              <button onClick={()=>handleDelete(_id)} className="btn btn-sm rounded-md text-white bg-[#EA4744]"><MdDelete /></button>
             </div>
         </div>
     </Link>

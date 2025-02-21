@@ -19,7 +19,7 @@ const UpdateCoffee = () => {
       const details = form.details.value;
       const photo = form.photo.value;
       const newCoffee = {name, chef, price, supplier, category, details, photo};
-      fetch(`http://localhost:5000/coffees/${LoadedCofffee._id}`,{
+      fetch(`https://coffee-store-server-5ofnevl9o-jawad-bashars-projects.vercel.app//${LoadedCofffee._id}`,{
         method: "put",
         headers: {
           "content-type" : "application/json"
